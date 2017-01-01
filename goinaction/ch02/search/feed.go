@@ -1,19 +1,19 @@
 package search
 
 import (
-	"os"
 	"encoding/json"
+	"os"
 )
 
 type Feed struct {
 	Name string `json:"site"`
-	URI string `josn:"link"`
- 	Type string `json:"type"`
+	URI  string `json:"link"`
+	Type string `json:"type"`
 }
 
 const dataFile = "data/data.json"
 
-func RetrieveFeeds() ([]*Feed, error)  {
+func RetrieveFeeds() ([]*Feed, error) {
 	file, err := os.Open(dataFile)
 	if err != nil {
 		return nil, err

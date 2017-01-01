@@ -28,12 +28,12 @@ func Run(searchTerm string)  {
 			Match(matcher, feed, searchTerm, results)
 			waitGroup.Done()
 		}(matcher, feed)
-
-		go func() {
-			waitGroup.Wait()
-			close(results)
-		}()
-
-		Display(results)
 	}
+
+	go func() {
+		waitGroup.Wait()
+		close(results)
+	}()
+
+	Display(results)
 }
