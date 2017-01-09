@@ -5,40 +5,39 @@ import "fmt"
 
 // notifier2 is an interface that defines notification
 // type behavior.
-type notifier2 interface {
-	notify()
+type notifier52 interface {
+	notify52()
 }
 
 // user1 define a user in the program.
-type user1 struct {
+type user52 struct {
 	name  string
 	email string
 }
 
 // notify implements the notifier interface with a pointer receiver.
-func (u *user1) notify() {
+func (u *user52) notify52() {
 	fmt.Printf("Send user email to %s<%s>\n", u.name, u.email)
 }
 
 // admin2 define a admin in the program
-type admin1 struct {
-	name  string
-	email string
-}
-
-// notify implements the notifier interface with a pointer receiver.
-func (a *admin1) notify() {
-	fmt.Printf("Send admin email to %s<%s>\n", a.name, a.email)
+type admin52 struct {
+	user52
+	level string
 }
 
 // main is the entry point for the application.
 func main() {
-	bill := user1{"Bill", "bill@email.com"}
-	sendNotification1(&bill)
+	ad := admin52{
+		user52: user52{
+			name:  "john smith",
+			email: "john@yahoo.com",
+		},
+		level: "supper",
+	}
 
-	lisa := admin1{"Lisa", "lisa@email.com"}
-	sendNotification1(&lisa)
+	sendNotification52(&ad)
 }
-func sendNotification1(n notifier) {
-	n.notify()
+func sendNotification52(n notifier52) {
+	n.notify52()
 }
