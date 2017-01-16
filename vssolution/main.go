@@ -7,7 +7,7 @@ import (
 	"os/exec"
 	"path/filepath"
 
-	"github.com/fengbaoxp/gosample/vssolution/convertor"
+	"github.com/eugenewyj/go-sample/vssolution/convertor"
 )
 
 func main() {
