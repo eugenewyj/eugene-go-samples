@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/eugenewyj/go-sample/goinaction/ch05/section54/entities"
+	"github.com/eugenewyj/go-sample/goinaction/ch05/ch0504/entities"
 	"fmt"
 )
 
