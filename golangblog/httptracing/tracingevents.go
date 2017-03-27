@@ -1,15 +1,15 @@
 package main
 
 import (
-	"net/http"
-	"net/http/httptrace"
 	"fmt"
 	"log"
+	"net/http"
+	"net/http/httptrace"
 )
 
 func main() {
 	req, _ := http.NewRequest("GET", "http://www.baidu.com", nil)
-	trace :=  &httptrace.ClientTrace{
+	trace := &httptrace.ClientTrace{
 		DNSDone: func(dnsDoneInfo httptrace.DNSDoneInfo) {
 			fmt.Printf("DNS Info: %+v\n", dnsDoneInfo)
 		},
