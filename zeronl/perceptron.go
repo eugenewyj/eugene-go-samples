@@ -43,7 +43,7 @@ func main() {
 	// 训练and感知器
 	andPerceptron := trainAndPerceptron()
 	// 打印训练获得的权重
-	fmt.Println(andPerceptron)
+	fmt.Printf("%+v\n", andPerceptron)
 	// 测试
 	fmt.Printf("1 and 1 = %d\n", andPerceptron.Predict([2]int8{1, 1}))
 	fmt.Printf("1 and 0 = %d\n", andPerceptron.Predict([2]int8{1, 0}))
