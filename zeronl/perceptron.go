@@ -7,12 +7,12 @@ import (
 )
 
 // 定义激活函数
-func f(x float32) float32 {
-	var result float32
+func activator(x float32) int8 {
+	var result int8
 	if x > 0 {
-		result = 1.0
+		result = 1
 	} else {
-		result = 0.0
+		result = 0
 	}
 	return result
 }
@@ -21,7 +21,7 @@ func f(x float32) float32 {
 func trainAndPerceptron() *perceptron.Perceptron {
 	// 创建感知器，输入参数个数为2（因为and是二元函数），激活函数为f
 	p := &perceptron.Perceptron{}
-	p.Init(2, f)
+	p.Init(2, activator)
 
 	// 训练，迭代10轮, 学习速率为0.1
 	inputVecs, labels := getTrainingDataSet()
@@ -39,6 +39,7 @@ func getTrainingDataSet() ([][2]int8, []int8) {
 	return inputVecs, labels
 }
 
+// main 程序入口
 func main() {
 	// 训练and感知器
 	andPerceptron := trainAndPerceptron()
