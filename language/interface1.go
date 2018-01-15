@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 type IServer interface {
@@ -50,6 +51,8 @@ func main() {
 	} else {
 		fmt.Println("ServerTypeA not Restart")
 	}
+	var v reflect.Value
+	v.Kind()
 
 	var sb IServer = new(ServerTypeB)
 	sb.Start()
