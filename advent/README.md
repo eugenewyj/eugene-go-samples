@@ -10,5 +10,6 @@ https://blog.gopheracademy.com/advent-2017/kubernetes-ready-service/
 docker login -u [用户名] -p [密码]
 2、结束时退出登录
 docker logout
-
+3、启动minikube时使用代理
+minikube start --docker-env HTTP_PROXY=http://192.168.99.1:1087 --docker-env HTTPS_PROXY=http://192.168.99.1:1087
 
