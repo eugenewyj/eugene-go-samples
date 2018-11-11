@@ -9,8 +9,8 @@ import (
 	"os/signal"
 	"syscall"
 
-	"github.com/eugenewyj/eugene-go-samples/advent/handler"
-	"github.com/eugenewyj/eugene-go-samples/advent/version"
+	"github.com/eugenewyj/go-samples/advent/handler"
+	"github.com/eugenewyj/go-samples/advent/version"
 	"golang.org/x/net/context"
 )
 

@@ -10,7 +10,7 @@ import (
 
 	"net/http"
 
-	"github.com/eugenewyj/eugene-go-samples/grpc-sample/api"
+	"github.com/eugenewyj/go-samples/grpc-sample/api"
 	"github.com/grpc-ecosystem/grpc-gateway/runtime"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc"

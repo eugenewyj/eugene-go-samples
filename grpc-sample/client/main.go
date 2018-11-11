@@ -5,7 +5,7 @@ import (
 
 	"log"
 
-	"github.com/eugenewyj/eugene-go-samples/grpc-sample/api"
+	"github.com/eugenewyj/go-samples/grpc-sample/api"
 	"golang.org/x/net/context"
 	"google.golang.org/grpc/credentials"
 )

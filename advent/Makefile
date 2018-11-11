@@ -3,7 +3,7 @@ PORT?=8000
 RELEASE?=0.0.1
 COMMIT?=$(shell git rev-parse --short HEAD)
 BUILD_TIME?=$(shell date -u '+%Y-%m-%d_%H:%M:%S')
-PROJECT?=github.com/eugenewyj/eugene-go-samples/advent
+PROJECT?=github.com/eugenewyj/go-samples/advent
 
 GOOS?=linux
 GOARCH?=amd64
